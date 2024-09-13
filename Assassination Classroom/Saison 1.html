@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style copy.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Saison 1</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">Anime-King</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item">
+                        <!-- Utilisation d'une balise <a> pour le lien -->
+                        <a href="../index.html" class="nav-button">Accueil</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a href="../Films.html" class="nav-button">Films</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <!-- Utilisation d'une balise <a> pour le lien -->
+                        <a href="../Animes.html" class="nav-button">Animes</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="barrerecherche">
+                <input type="text" id="searchInput" placeholder="Rechercher..." onkeyup="filterAnimes()">
+
+                <button type="button" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <!-- Liste des résultats de recherche -->
+            <ul id="resultsList"></ul>
+
+            <div class="toggle">
+            <i class="fas fa-moon toggle-icon"></i>
+            <i class="fas fa-sun toggle-icon"></i>
+            <div class="toggle-ball"></div>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a href="../index.html" class="icon-link">
+            <i class="left-menu-icon fas fa-home"></i> 
+        </a>
+        <a href="../Planning.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-calendar-days"></i> 
+        </a>
+        <a href="../Catalogue.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-list"></i>
+        </a>
+        <a href="../Page-aide.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-gear"></i>
+        </a>
+    </div>
+    
+    
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515);">
+        <div class="movie-list-container">
+
+
+        <div class="banner">
+            <a href="/Assassination Classroom/Assassination Classroom.html">
+             <img class="banner img" src="../image/assination-classroom.jpg" alt="Assassination Classroom">
+            </a>
+        <div>
+        
+        <div class="anime-title">
+            <h1>Assassination Classroom</h1>
+        </div>
+
+        <div class="container">
+            <h1>Saison 1</h1>
+            <select id="episode-select">
+                <option value="episode1">Épisode 1</option>
+                <option value="episode2">Épisode 2</option>
+                <option value="episode3">Épisode 3</option>
+                <option value="episode4">Épisode 4</option>
+                <option value="episode5">Épisode 5</option>
+                <option value="episode6">Épisode 6</option>
+                <option value="episode7">Épisode 7</option>
+                <option value="episode8">Épisode 8</option>
+                <option value="episode9">Épisode 9</option>
+                <option value="episode10">Épisode 10</option>
+                <option value="episode11">Épisode 11</option>
+                <option value="episode12">Épisode 12</option>
+                <option value="episode13">Épisode 13</option>
+                <option value="episode14">Épisode 14</option>
+                <option value="episode15">Épisode 15</option>
+                <option value="episode16">Épisode 16</option>
+                <option value="episode17">Épisode 17</option>
+                <option value="episode18">Épisode 18</option>
+                <option value="episode19">Épisode 19</option>
+                <option value="episode20">Épisode 20</option>
+                <option value="episode21">Épisode 21</option>
+                <option value="episode22">Épisode 22</option>
+            </select>
+
+            <div class="help-button-container">
+                <a href="../Page-aide.html" class="help-button">Besoin d'aide ?</a>
+            </div>
+        
+            <div class="button-group">
+                <button id="prev-episode">Précédent</button>
+                <button id="last-episode">Dernier Épisode</button>
+                <button id="next-episode">Suivant</button>
+            </div>
+        
+            <iframe id="video-iframe" src="https://video.sibnet.ru/shell.php?videoid=123456789" allowfullscreen></iframe>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Anime-King. Tous droits réservés.</p>
+        </footer>
+    </div>
+    <script src="../app.js"></script>
+    <script src="../script.js"></script>
+    <script src="/Assassination Classroom/Assassination Classroom.js"></script>
+    <script src="../episodes.json"></script>
+
+</body>
+
+</html>

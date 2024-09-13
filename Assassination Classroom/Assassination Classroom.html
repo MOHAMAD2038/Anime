@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style-anime.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Assassination Classroom</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">Anime-King</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item">
+                        <!-- Utilisation d'une balise <a> pour le lien -->
+                        <a href="/index.html" class="nav-button">Accueil</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a href="/Films.html" class="nav-button">Films</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <!-- Utilisation d'une balise <a> pour le lien -->
+                        <a href="/Animes.html" class="nav-button">Animes</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="barrerecherche">
+                <input type="text" id="searchInput" placeholder="Rechercher..." onkeyup="filterAnimes()">
+
+                <button type="button" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <!-- Liste des résultats de recherche -->
+            <ul id="resultsList"></ul>
+
+            <div class="toggle">
+            <i class="fas fa-moon toggle-icon"></i>
+            <i class="fas fa-sun toggle-icon"></i>
+            <div class="toggle-ball"></div>
+            </div>
+           
+        </div>
+    </div>
+    
+    
+    <div class="containerA">
+        <div class="content-container">
+            <div class="featured-content"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515);">
+        <div class="movie-list-container">
+        <div class="banner">
+            <img class="banner img" src="/image/assination-classroom.jpg" alt="assination-classroom">
+        <div>
+        <div class="anime-title">
+            <h1>Assassination Classroom</h1>
+        </div>
+        <div class="anime-container">
+            <div class="anime-section">
+                <h2>ANIME</h2>
+                <div class="anime-options">
+                    <a href="Saison 1.html" class="anime-link">
+                        <div class="anime-option">
+                            <img src="/image/assination-classroom.jpg">
+                            <span>Saison 1</span>
+                        </div>
+                    </a>
+                    <a href="Saison 2.html" class="anime-link">
+                        <div class="anime-option">
+                            <img src="/image/assination-classroom.jpg">
+                            <span>Saison 2</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="anime-details">
+               <div class="synopsis-section">
+                   <h2>Synopsis</h2>
+                   <p>La planète Terre est en sursis | Après avoir partiellement détruit la Lune, un être étrange et surpuissant a décrété que si personne ne parvenait à le tuer dans l'année à venir, la planète subirait le même sort que son satellite. Durant ce laps de temps, il a également exigé d'être nammé professeur de la classe 3-E du lycée Kunugigaoka, aussi connue sous le nom de "Class End", la classe des cas désespérés. Les étudiants sont donc les mieux placés pour tuer cet étrange professeur, baptisé Koro-sensei, et ainsi empocher la somme astronomique de 10 milliards de yens. L'ennui, c'est que la majorité des lycéens de cette classe manquent cruellement de confiance en eux, écrasés par un systéme qui ne leur convient pas.
+                   </p>
+                </div>
+                <div class="genre-section">
+                    <h2>Genres</h2>
+                    <p>Action, Comédie, School-Life, Surnaturel</p>
+                </div>
+           </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Anime-King. Tous droits réservés.</p>
+        </footer>
+        
+    </div>
+    <script src="/app.js"></script>
+    <script src="../episodes.json"></script>
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
