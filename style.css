@@ -1,0 +1,845 @@
+* {
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #151515;
+    color: white;
+    padding-top: 50px; /* Ajoutez un padding en haut pour éviter que le contenu soit caché sous la navbar */
+  }
+  
+/* Styles pour la navbar */
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Assurez-vous que la navbar est au-dessus des autres éléments */
+}
+
+/* Conteneur de la navbar */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: white;
+  font-family: "Sen", sans-serif;
+}
+
+/* Boutons de la navbar */
+.nav-button {
+  background-color: #4dbf00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 1s all ease-in-out;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  margin-right: 10px;
+}
+
+/* Style de base du bouton */
+.nav-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff5733; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  background-color: #4dbf00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 1s all ease-in-out;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  margin-right: 10px;
+}
+
+/* Animation d'effet hover */
+.nav-button:hover {
+  background-color: #e84323;
+  color: #fff;
+}
+
+/* Effet d'animation au survol avec un soulignement progressif */
+.nav-button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #4dbf00;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animation continue (brillance) */
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.nav-button {
+  background: linear-gradient(90deg, #4dbf00,  #369b00);
+  background-size: 200% 100%;
+  animation: shine 5s linear infinite;
+}
+
+
+
+
+/* Effet au survol des boutons */
+.nav-button:hover {
+  background-color: #369b00;
+}
+
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.left-menu-icon {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+/* Styles pour la barre de recherche */
+.barrerecherche {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Aligne la barre de recherche à droite */
+  margin-right: 50px; /* Décale la barre de recherche à gauche */
+  border-radius: 25px;
+  background-color: #000; /* Fond noir */
+  overflow: hidden;
+  position: relative; /* Position relative pour la barre de recherche */
+  width: 300px; /* Largeur de la barre de recherche augmentée */
+  max-width: 100%; /* Empêche la barre de dépasser la largeur du conteneur parent */
+}
+
+.barrerecherche [type="text"] {
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  flex: 1;
+  border-radius: 25px;
+  outline: none;
+  color: #fff; /* Texte blanc */
+  background-color: #000; /* Fond noir */
+}
+
+.barrerecherche .search-button {
+  background-color: #fff; /* Fond blanc */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 0 25px 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barrerecherche [type="text"]::placeholder {
+  color: #888; /* Texte du placeholder en gris */
+}
+
+.barrerecherche [type="text"]:focus {
+  border-color: #fff; /* Bordure blanche au focus */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* Ombre blanche au focus */
+}
+
+
+/* Styles pour la liste des résultats */
+#resultsList {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #000; /* Bordure noire */
+  border-top: none;
+  border-radius: 14px;
+  background-color: black; /* Fond blanc */
+  position: absolute; /* Positionnement absolu pour afficher en dessous de la barre de recherche */
+  z-index: 1000; /* Assurez-vous que la liste des résultats est au-dessus des autres éléments */
+}
+
+#resultsList li {
+  padding: 10px;
+  border-bottom: 1px solid #181515; /* Bordure de séparation gris clair */
+  color: white; /* Texte noir */
+}
+
+#resultsList li:hover {
+  cursor: pointer;
+}
+
+#resultsList .result-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#resultsList .result-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#resultsList .result-description {
+  font-size: 12px;
+  color: #555; /* Couleur du texte de la description */
+}
+
+#search-results {
+    display: none; /* Hide the search results by default */
+    position: absolute;
+    top: 100%; /* Positioning the results just below the search bar */
+    left: 0;
+    background-color: white; /* Background color of the results container */
+    border: 1px solid #ccc; /* Border around the results container */
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: 100%; /* Make the results container as wide as the search bar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+
+.logo-container {
+  flex: 1;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center; /* Aligne le texte et l'image verticalement */
+  text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+.logo-text {
+  font-size: 30px; /* Taille du texte */
+  color: white; /* Couleur du texte */
+}
+
+
+  
+  .menu-container {
+    flex: 2;
+    justify-content: center; /* Centre le logo et le texte horizontalement */
+    margin-left: 50px;
+  }
+  
+  .menu-list {
+    display: flex;
+    list-style: none;
+  }
+  
+  .menu-list-item {
+    margin-right: 30px;
+  }
+  
+  .menu-list-item.active {
+    font-weight: bold;
+  }
+
+  .profile-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+
+  
+  .toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+  }
+  
+  .toggle-icon {
+    color: goldenrod;
+  }
+  
+  .toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+  }
+  
+  .container {
+    background-color: #151515;
+    min-height: 260vh; /* Occupe 100% de la hauteur de la fenêtre */
+    color: white;
+    margin: 0; /* Assurez-vous qu'il n'y a pas de marge autour du conteneur */
+    padding: 0; /* Assurez-vous qu'il n'y a pas de padding autour du conteneur */
+  }
+
+  .containerO {
+    background-color: #151515;
+    min-height: 100vh; /* Occupe 100% de la hauteur de la fenêtre */
+    color: white;
+    margin: 0; /* Assurez-vous qu'il n'y a pas de marge autour du conteneur */
+    padding: 0; /* Assurez-vous qu'il n'y a pas de padding autour du conteneur */
+  }
+
+  .content-container {
+    margin-left: 50px;
+  }
+  
+  .featured-content {
+    height: 50vh;
+    padding: 50px;
+  }
+  
+  .featured-title {
+    width: 150px;
+  }
+  
+  .featured-desc {
+    width: 400px;
+    color: lightgray;
+    margin: 30px 0;
+    font-family: "Sen", sans-serif;
+
+  }
+  
+  .featured-button {
+    background-color: #4dbf00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none; /* Enlever le soulignement */
+
+  }
+  
+  .movie-list-container {
+    padding: 0 20px;
+  }
+  
+  .movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .movie-list {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+  }
+  
+  .movie-list-item {
+    margin-right: 30px;
+    position: relative;
+  }
+  
+  .movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+  }
+  
+  .movie-list-item:hover .movie-list-item-title,
+  .movie-list-item:hover .movie-list-item-desc,
+  .movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+  }
+  
+  .movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .movie-list-item-title {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 17px;
+    font-weight: bold;
+    position: absolute;
+    top: 5%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    font-family: "Sen", sans-serif;
+  }
+  
+
+
+
+  
+  .movie-list-item-desc {
+    background-color: #333;
+    padding: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    width: 270px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    font-family: "Sen", sans-serif;
+  }
+  
+  .movie-list-item-button {
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none; /* Enlever le soulignement */
+  }
+
+  /* Style de base du bouton */
+.movie-list-item-button {
+  display: inline-block;
+  padding: 10px;
+  background-color: #4dbf00; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0px;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none; /* Enlever le soulignement */
+}
+
+/* Animation d'effet hover */
+.movie-list-item-button:hover {
+  background-color: #4dbf00;
+  color: #fff;
+}
+
+/* Effet d'animation au survol avec un soulignement progressif */
+.movie-list-item-button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.movie-list-item-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animation continue (brillance) */
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.movie-list-item-button {
+  background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+  background-size: 200% 100%;
+  animation: shine 2s linear infinite;
+}
+
+  
+  .arrow {
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .container.active {
+    background-color: white;
+  }
+  
+  .movie-list-title.active {
+    color: black;
+  }
+  
+  .navbar-container.active {
+    background-color: white;
+  
+    color: black;
+  }
+  
+  .toggle.active{
+      background-color: black;
+  }
+  
+  .toggle-ball.active{
+      background-color: white;
+      transform: translateX(-20px);
+  }
+  
+  @media only screen and (max-width: 940px){
+      .menu-container{
+          display: none;
+      }
+  }
+
+  .banner {
+    width: 1080px; /* La bannière occupe toute la largeur de la page */
+    height: 500px;
+    position: center;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    border-radius: 14px;
+    margin-bottom: 20px; /* Ajoute un espace sous la bannière */
+    left: 40px;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover; /* S'assure que l'image couvre bien la bannière sans déformation */
+    filter: brightness(0.9); /* Optionnel : Ajoute un léger effet d'assombrissement à l'image */
+    border-radius: 14px;
+  }
+
+  
+  .bannerO {
+    width: 500px; /* La bannière occupe toute la largeur de la page */
+    height: 250px;
+    position: center;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    border-radius: 14px;
+    margin-bottom: 20px; /* Ajoute un espace sous la bannière */
+    left: 40px;
+  }
+
+  .bannerO img {
+    width: 500px;
+    height: 250px;
+    object-fit: cover; /* S'assure que l'image couvre bien la bannière sans déformation */
+    filter: brightness(0.9); /* Optionnel : Ajoute un léger effet d'assombrissement à l'image */
+    border-radius: 14px;
+  }
+
+
+   /* Banniere */
+  .banner {
+   position: relative;
+   text-align: center;
+   margin-bottom: 20px;
+  }
+
+  .banner-img {
+   width: 100%;
+   border-radius: 10px;
+  }
+
+  .anime-title {
+    position: absolute;
+    bottom: 0px; /* Ajustez cette valeur pour positionner le titre plus ou moins bas */
+    left: 50px; /* Ajustez cette valeur pour éloigner ou rapprocher le titre du bord gauche */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ajoute une ombre portée pour une meilleure lisibilité */
+    font-size: 3rem; /* Taille du texte */
+    font-family: "Sen", sans-serif;
+  }
+
+  .anime-title h1 {
+    margin: 0; /* Supprime les marges du h1 */
+    padding: 0;
+  }
+
+  .anime-container {
+    text-align: center;
+    margin-top: 0px; 
+  }
+
+  .anime-section h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .anime-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+    gap: 10px; /* Espacement entre les éléments */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    width: 100%; /* Utilise toute la largeur de la cellule */
+    font-family: "Roboto", sans-serif;
+  }
+
+  .anime-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    gap: 10px; /* Espace entre les éléments */
+  }
+
+  .anime-option img {
+    width: 250px;
+    height: 100px;
+  }
+  
+  .anime-option span {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .anime-option:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .anime-link {
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.anime-options, .synopsis-section, .genres-section {
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.anime-link:hover {
+  background-color: #555;
+}
+
+.synopsis-section p, .genres-section p {
+  font-size: 16px;
+  top: 100px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Section Détails de l'Anime (Manga, Genres, Synopsis) */
+
+.anime-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+
+.synopsis-section p {
+  font-size: 18px;
+  color: #ccc;
+  font-family: "Roboto", sans-serif;
+}
+
+.anime-details {
+  margin: 0px ; /* Espace au-dessus et en dessous pour séparer de la bannière et des arcs */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.genres-section {
+  margin-top: 40px; /* Augmentez cette valeur pour plus d'espace au-dessus de la section genres */
+  padding: 20px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.synopsis-section {
+  padding: 30px; /* Ajustez si nécessaire pour avoir plus ou moins d'espace interne */
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+header {
+  background-color: #151515;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+section {
+  padding: 30px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  bottom: 0;
+}
+
+.icon-link {
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+}
+
+
+
+.icon-link i {
+  font-size: 30px; /* Ajuster la taille de l'icône */
+  
+  transition: color 0.3s ease;
+}
+
+.icon-link i:hover {
+  color: #ffffff; /* Changer de couleur au survol */
+}
+
+
+
+
+
+/* Style de base du bouton */
+.featured-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff5733; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+/* Animation d'effet hover */
+.featured-button:hover {
+  background-color: #e84323;
+  color: #fff;
+}
+
+/* Effet d'animation au survol avec un soulignement progressif */
+.featured-button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.featured-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animation continue (brillance) */
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.featured-button {
+  background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+  background-size: 200% 100%;
+  animation: shine 2s linear infinite;
+}
+
+

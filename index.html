@@ -1,0 +1,414 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Anime-King</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">Anime-King</span>
+                </a>
+            </div>
+
+            <div class="profile-container">
+               
+            </div>
+         
+            
+            <div class="barrerecherche">
+                <input type="text" id="searchInput" placeholder="Rechercher..." onkeyup="filterAnimes()">
+                <button type="button" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <!-- Liste des résultats de recherche -->
+            <ul id="resultsList"></ul>
+
+            <div class="menu-container">
+                
+                <ul class="menu-list">
+                    <li class="menu-list-item">
+                        <!-- Utilisation d'une balise <a> pour le lien -->
+                        <a href="Animes.html" class="nav-button">Animes</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a href="Films.html" class="nav-button">Films</a>
+                    </li>
+                  
+                </ul>
+            </div>
+
+          
+           
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a href="index.html" class="icon-link">
+            <i class="left-menu-icon fas fa-home"></i> 
+        </a>
+        <a href="reprendre son visionae" class="icon-link"></a>
+        <i class="left-menu-icon fa-regular fa-clock"></i>
+        </a>
+        <a href="Planning.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-calendar-days"></i> 
+        </a>
+        <a href="Catalogue.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-list"></i>
+        </a>
+        <a href="Page-aide.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-gear"></i>
+        </a>
+       
+    </div>
+    
+    
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('image/Arriere-plan\ One\ piece.jpg');">
+                <img class="featured-title" src="image/one piece logo.png" alt="">
+                <p class="featured-desc">"One piece" est un anime où Monkey D. Luffy,un jeune pirate,rêve de trouver le trésor légandaire "One piece" pour devenir le Roi des Pirates.
+                    Avec son équipage,il explore des îles mystérieuses et affronte de nombreux ennemis.</p>
+                <a href="/One piece/One piece.html" class="featured-button">Watch</a>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Films</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/jujutsu kaisen 0.JPG" alt="">
+                            <span class="movie-list-item-title">Jujutsu Kaisen 0</span>
+                            <p class="movie-list-item-desc">"Jujutsu Kaisen 0" est un film d'animation suit Yuta Okkotsu,hanté par l'esprit de son amie.Il rejoint une école pour apprendre à  exorciser des esprits maléfiques </p>
+                            <a href="/Jujustu-Kaisen/Jujustu Kaisen.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/one piece red.jpg" alt="">
+                            <span class="movie-list-item-title">One Piece Red</span>
+                            <p class="movie-list-item-desc">DAns "One Piece Red" ,on suit Uta, la fille de Shanks, qui organise un concert mondial. L'événement devient chaotique lorsque des secrets sont révélés et que des menaces surgissent.</p>
+                            <a href="/One piece/One piece.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/Totoro.jpg" alt="">
+                            <span class="movie-list-item-title">Mon Voisin Totoro</span>
+                            <p class="movie-list-item-desc">"Mon Voisin Totoro" suit Satsuki et Mei, deux jeunes sœurs qui emménagent à la campagne et découvrent des créatures magiques, dont Totoro, un esprit de la forêt. Ensemble, ils vivent des aventures enchantées et trouvent du réconfort dans leur nouvelle vie.</p>
+                            <a href="/Tororo/Tororo.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/your name.jpeg" alt="">
+                            <span class="movie-list-item-title">Your Name</span>
+                            <p class="movie-list-item-desc">Mitsuha habite avec sa grand-mère et sa petite sœur dans un village au cœur des montagnes, où les traditions ont une importance capitale. Elle souhaite depuis toujours découvrir le quotidien d'un adolescent de Tokyo.</p>
+                            <a href="/Your name/your name.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/le-voyage-de-chihiro.jpg" alt="">
+                            <span class="movie-list-item-title">Le Voyage de Chihiro</span>
+                            <p class="movie-list-item-desc">Le film raconte l'histoire de Chihiro, 
+                                une jeune fille de dix ans qui se retrouve transportée dans un monde mystérieux rempli de créatures surnaturelles.</p>
+                                <a href="/Le voyage de chihiro/Le voyage de chihiro.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/lechateauambulant.jpg" alt="">
+                            <span class="movie-list-item-title">Le château ambulant</span>
+                            <p class="movie-list-item-desc">Il raconte l'histoire de Sophie,qui est transformée en vieille femme par une sorcière qui entre dans sa boutique.
+                                 Elle rencontre un sorcier nommé Hauru et se retrouve engagée dans son combat pour le roi.</p>
+                                <a href="/Le château ambulant/Le château ambulant.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                      
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fonnoir.jpg" alt="">
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Anime</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/samouraichamploo.jpg" alt="">
+                            <span class="movie-list-item-title">Samourai Champloo</span>
+                            <p class="movie-list-item-desc">"Samurai Champloo" suit Mugen, Jin et Fuu, trois personnages disparates, dans leur quête à travers le Japon féodal pour trouver le "samouraï qui sent le tournesol." Leur voyage est marqué par des aventures et des confrontations, mêlant action et comédie.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fire force.jpg" alt="">
+                            <span class="movie-list-item-title">Fire Force</span>
+                            <p class="movie-list-item-desc">"Fire Force" suit Shinra Kusakabe, un pompier capable de s'enflammer, qui rejoint la Special Fire Force pour combattre des humains en combustion spontanée et découvrir la vérité derrière ces phénomènes et son passé.</p>
+                            <a href="/Assassination Classroom/Assassination Classroom.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/death note.jpeg" alt="">
+                            <span class="movie-list-item-title">Death Note</span>
+                            <p class="movie-list-item-desc">Light Yagami, un lycéen de 17 ans, découvre un carnet aux pouvoirs terrifiants : tous ceux dont le nom s'y trouve inscrit sont condamnés à mourir dans les quarante secondes…</p>
+                            <a href="/Death Note/Death Note.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/hell s paradise.jpg" alt="">
+                            <span class="movie-list-item-title">Hell's Paradise</span>
+                            <p class="movie-list-item-desc">"Hell's Paradise" suit Gabimaru, un ninja condamné à mort, qui se voit offrir une chance de rédemption en cherchant l'élixir d'immortalité sur une île mystérieuse. Accompagné de l'exécutrice Yamada Asaemon Sagiri, il affronte des dangers surnaturels et d'autres criminels en quête de l'élixir.</p>
+                            <a href="/Assassination Classroom/Assassination Classroom.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/erased.jpg" alt="">
+                            <span class="movie-list-item-title">Erased</span>
+                            <p class="movie-list-item-desc">"Erased" suit Satoru Fujinuma, un homme capable de voyager dans le passé pour prévenir des tragédies. Après que sa mère soit assassinée, il est renvoyé 18 ans en arrière, dans son enfance, pour empêcher une série d'enlèvements et de meurtres et sauver sa mère et ses amis.</p>
+                            <a href="/Assassination Classroom/Assassination Classroom.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/assination-classroom.jpg" alt="">
+                            <span class="movie-list-item-title">Assassination Classroom</span>
+                            <p class="movie-list-item-desc">"Assassination Classroom" suit la classe 3-E du collège Kunugigaoka, dont les élèves doivent assassiner leur professeur extraterrestre, Koro-sensei, avant qu'il ne détruise la Terre. Malgré cela, Koro-sensei les enseigne précieusement, aidant chacun à réaliser son potentiel.</p>
+                            <a href="/Assassination Classroom/Assassination Classroom.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/promised neverland.jpg" alt="">
+                            <span class="movie-list-item-title">The Promised Neverland</span>
+                            <p class="movie-list-item-desc">"The Promised Neverland" suit Emma, Norman et Ray, des orphelins qui découvrent que leur orphelinat élève des enfants pour les livrer à des démons. Ils planifient une évasion pour sauver leurs camarades.</p>
+                            <a href="/The Promised Neverland/The Promised Neverland.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/image/cyberpunk.png" alt="">
+                            <span class="movie-list-item-title">Cyberpunk:Edgerunners</span>
+                            <p class="movie-list-item-desc">"Cyberpunk: Edgerunners" suit David Martinez, un jeune dans une société futuriste, qui devient un mercenaire hors-la-loi pour survivre après une tragédie personnelle.</p>
+                           <a href="/Cyberpunk Edgerunners/Cyberpunk Edgerunners.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/parasyte.jpg" alt="">
+                            <span class="movie-list-item-title">Parasyte</span>
+                            <p class="movie-list-item-desc">"Parasyte" suit Shinichi Izumi, un lycéen dont la main droite est envahie par un parasite extraterrestre nommé Migi. Ensemble, ils combattent d'autres parasites et cherchent à comprendre la menace qui pèse sur l'humanité.</p>
+                           <a href="/Assassination Classroom/Assassination Classroom.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                  
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/spy x family.jpg" alt="">
+                            <span class="movie-list-item-title">Spy x Family</span>
+                            <p class="movie-list-item-desc">"Spy x Family" suit Twilight, un espion qui doit créer une fausse famille pour sa mission. Il adopte une fille télépathe, Anya, et épouse une tueuse à gages, Yor, sans connaître leurs secrets. Ensemble, ils naviguent leur double vie tout en formant des liens authentiques.</p>
+                            <a href="/Assassination Classroom/Assassination Classroom.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                      
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/black clover.jpeg" alt="">
+                            <span class="movie-list-item-title">Black Clover</span>
+                            <p class="movie-list-item-desc">"Black Clover" suit Asta, un garçon né sans magie dans un monde où elle est omniprésente. Déterminé à devenir le Roi Sorcier, il compense son absence de magie par une force brute et une épée anti-magie. Aux côtés de son rival Yuno et ses amis, il affronte diverses menaces pour protéger le royaume.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/tokyo ghoul.jpg" alt="">
+                            <span class="movie-list-item-title">Tokyo Ghoul</span>
+                            <p class="movie-list-item-desc">"Tokyo Ghoul" suit Ken Kaneki, un étudiant qui devient mi-humain, mi-goule après une greffe d'organe. Luttant pour sa survie et son identité, il navigue entre le monde des humains et celui des goules, créatures mangeuses de chair, tout en affrontant des conflits internes et externes.</p>
+                            <a href="/Assassination Classroom/Assassination Classroom.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fonnoir.jpg" alt="">
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('image/dragonball.jpg');">
+                <img class="featured-title" src="image/Logo Dragon ball Z.jpg" alt="">
+                <p class="featured-desc">"Dragon Ball" suit Son Goku, un jeune guerrier aux pouvoirs extraordinaires, dans sa quête pour trouver les Dragon Balls, des artefacts magiques capables d'exaucer un vœu. Au cours de ses aventures, il affronte divers ennemis et se lie d'amitié avec de nombreux personnages.</p>
+                <button class="featured-button">WATCH</button>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Les Classiques</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/demon slayer.jpg" alt="">
+                            <span class="movie-list-item-title">Demon Slayer</span>
+                            <p class="movie-list-item-desc">"Demon Slayer" suit Tanjiro Kamado, un jeune qui devient chasseur de démons après que sa famille ait été massacrée par des démons et que sa sœur Nezuko ait été transformée en démon. Il lutte pour protéger sa sœur et venger sa famille, tout en affrontant des démons puissants et découvrant les secrets de leur existence.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/mha.jpg" alt="">
+                            <span class="movie-list-item-title">My Hero Academia</span>
+                            <p class="movie-list-item-desc">"My Hero Academia" suit Izuku Midoriya, un adolescent né sans pouvoirs dans un monde où la majorité des gens en possèdent. Après avoir hérité des pouvoirs du héros All Might, il entre à l'académie des héros pour devenir un grand héros et protéger la société des vilains.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                         <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/snk.jpg" alt="">
+                            <span class="movie-list-item-title">Shingeki No Kyojin</span>
+                            <p class="movie-list-item-desc">"L'Attaque des Titans" suit Eren Jäger et ses amis, qui se battent pour sauver l'humanité des Titans, des créatures géantes qui ont presque anéanti la civilisation. Au fil des batailles, ils découvrent des mystères sur l'origine des Titans et les secrets de leur propre monde.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/dragonball.jpg" alt="">
+                            <span class="movie-list-item-title">Dragon Ball Z</span>
+                            <p class="movie-list-item-desc">"Dragon Ball Z" suit Son Goku et ses amis alors qu'ils défendent la Terre contre de puissants ennemis, comme les Saiyans, Freezer, Cell et Majin Boo. L'histoire explore leurs batailles épiques, leurs entraînements intensifs et les transformations en Super Saiyans.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/naruto.jpg" alt="">
+                            <span class="movie-list-item-title">Naruto</span>
+                            <p class="movie-list-item-desc">"Naruto" suit Naruto Uzumaki, un jeune ninja avec le démon-renard à neuf queues scellé en lui. Il aspire à devenir Hokage, le chef de son village, et à obtenir la reconnaissance et le respect de ses pairs.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/narutoshippuden.jpg" alt="">
+                            <span class="movie-list-item-title">Naruto Shippuden</span>
+                            <p class="movie-list-item-desc">"Naruto Shippuden" suit Naruto Uzumaki, adolescent, alors qu'il cherche à sauver son ami Sasuke et à protéger le monde ninja des menaces comme l'Akatsuki et Madara Uchiwa, tout en poursuivant son rêve de devenir Hokage.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/bleach.jpg" alt="">
+                            <span class="movie-list-item-title">Bleach</span>
+                            <p class="movie-list-item-desc">"Bleach" suit Ichigo Kurosaki, un lycéen qui devient un Soul Reaper en obtenant les pouvoirs de Rukia Kuchiki. Il protège les vivants, guide les âmes vers l'au-delà et combat de puissants ennemis pour sauver ses amis et maintenir l'équilibre entre les mondes.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/hunter.jpg" alt="">
+                            <span class="movie-list-item-title">Hunter X Hunter</span>
+                            <p class="movie-list-item-desc">"Hunter x Hunter" suit Gon Freecss, un jeune garçon qui devient Hunter pour retrouver son père. En chemin, il se lie d'amitié avec d'autres Hunters et affronte divers défis et adversaires puissants.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fullmetlbr.jpg" alt="">
+                            <span class="movie-list-item-title">Fullmetal Alchemist Brotherhood</span>
+                            <p class="movie-list-item-desc">"Fullmetal Alchemist: Brotherhood" suit les frères Edward et Alphonse Elric, qui cherchent à restaurer leurs corps après une transmutation ratée. Leur quête les confronte à des secrets politiques et des vérités profondes sur l'alchimie.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fairythail.jpg" alt="">
+                            <span class="movie-list-item-title">Fairy Tail</span>
+                            <p class="movie-list-item-desc">"Fairy Tail" suit Lucy Heartfilia, une jeune mage qui rejoint la guilde Fairy Tail. Avec Natsu Dragnir et leurs amis, elle vit des aventures magiques, combat des ennemis puissants, et défend leur guilde tout en cherchant à devenir une mage accomplie.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                       
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/jujutsu kaisen.jpg" alt="">
+                            <span class="movie-list-item-title">Jujutsu kaisen</span>
+                            <p class="movie-list-item-desc">"Jujutsu Kaisen" suit Yuji Itadori, un lycéen qui ingère un doigt maudit appartenant au puissant démon Sukuna. Il rejoint les exorcistes de Jujutsu High pour combattre les malédictions et trouver les autres doigts de Sukuna afin de détruire le démon définitivement.</p>
+                            <a href="/Jujustu-Kaisen/Jujustu Kaisen.html" class="movie-list-item-button">Watch</a>
+                        </div>
+                     
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fonnoir.jpg" alt="">
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fonnoir.jpg" alt="">
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fonnoir.jpg" alt="">
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Les Pépites</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/One punche man.jpg" alt="">
+                            <span class="movie-list-item-title">One Punch Man</span>
+                            <p class="movie-list-item-desc">"One Punch Man" suit Saitama, un super-héros capable de vaincre n'importe quel ennemi avec un seul coup de poing. Ennuyé par l'absence de défi, il cherche un adversaire digne de lui tout en naviguant la vie quotidienne et les absurdités du monde des héros.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/Tokyo Revengers.jpg" alt="">
+                            <span class="movie-list-item-title">Tokyo Revengers</span>
+                            <p class="movie-list-item-desc">"Tokyo Revengers" suit Takemichi Hanagaki, un jeune homme qui voyage dans le temps pour sauver son ex-petite amie Hinata et ses amis. En retournant dans son passé de lycéen délinquant, il tente de changer le cours des événements et démanteler le gang Tokyo Manji pour éviter les tragédies futures.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/blue lock.jpg" alt="">
+                            <span class="movie-list-item-title">Blue Lock</span>
+                            <p class="movie-list-item-desc">"Blue Lock" suit Yoichi Isagi, un jeune attaquant de football, qui participe à un programme rigoureux et compétitif appelé Blue Lock. L'objectif est de créer le meilleur attaquant du monde pour l'équipe nationale japonaise. Les participants doivent rivaliser les uns avec les autres pour réaliser leurs rêves de devenir la star du football.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/chainsaw man.jpg" alt="">
+                            <span class="movie-list-item-title">Chainsaw Man</span>
+                            <p class="movie-list-item-desc">"Chainsaw Man" suit Denji, un jeune homme criblé de dettes, qui fusionne avec son chien-démon Pochita pour devenir un hybride humain-démon capable de se transformer en Chainsaw Man. Travaillant pour une organisation gouvernementale, il chasse des démons tout en cherchant une vie meilleure.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/vinland saga.jpeg" alt="">
+                            <span class="movie-list-item-title">Vinland Saga</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/solo leveling.jpg" alt="">
+                            <span class="movie-list-item-title">Solo Leveling</span>
+                            <p class="movie-list-item-desc">Un shonen culte de fantasy qu'on ne présente plus ! Fairy Tail raconte les aventures de la guilde de magiciens la plus puissante du royaume de Fiore.
+                                 Une œuvre qui a propulsé son auteur, Hiro Mashima, au rang des mangakas incontournables de sa génération !</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/tower of god.jpg" alt="">
+                            <span class="movie-list-item-title">Tower Of God</span>
+                            <p class="movie-list-item-desc">"Tower of God" suit Bam, un garçon qui entre dans une mystérieuse tour pour retrouver son amie Rachel. À chaque étage, il doit surmonter des épreuves mortelles et affronter de puissants adversaires, découvrant des secrets sur la tour et lui-même en chemin.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/made in abyss.jpe" alt="">
+                            <span class="movie-list-item-title">Made in Abyss</span>
+                            <p class="movie-list-item-desc">"Made in Abyss" suit Riko, une jeune fille, et Reg, un robot, qui descendent dans l'Abysse, un gigantesque gouffre rempli de créatures étranges et de reliques mystérieuses, pour retrouver la mère disparue de Riko. Ensemble, ils affrontent les dangers et les mystères de l'Abysse.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/mob.png" alt="">
+                            <span class="movie-list-item-title">Mob Psycho 100</span>
+                            <p class="movie-list-item-desc">"Mob Psycho 100" suit Shigeo "Mob" Kageyama, un collégien doté de puissants pouvoirs psychiques. Il tente de vivre une vie normale et contrôler ses émotions pour éviter que ses pouvoirs ne deviennent incontrôlables. Aux côtés de son mentor charlatan Reigen, il affronte divers esprits et organisations surnaturelles.Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/kaiju n 8.jpg" alt="">
+                            <span class="movie-list-item-title">Kaiju N°8</span>
+                            <p class="movie-list-item-desc">"Kaiju No. 8" suit Kafka Hibino, un homme de 32 ans qui, après un incident, peut se transformer en kaiju, des monstres géants. Il utilise ses nouvelles capacités pour combattre les kaijus et protéger le Japon, tout en cachant son secret et poursuivant son rêve de rejoindre les Forces de Défense.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                      
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/dr stone.jpeg" alt="">
+                            <span class="movie-list-item-title">Dr.Stone</span>
+                            <p class="movie-list-item-desc">"Dr. Stone" suit Senku Ishigami, un génie scientifique, qui se réveille dans un monde où toute l'humanité a été pétrifiée pendant des millénaires. Avec ses connaissances, il s'efforce de reconstruire la civilisation en redécouvrant et en réinventant des technologies cruciales.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fonnoir.jpg" alt="">
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fonnoir.jpg" alt="">
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Anime-King. Tous droits réservés.</p>
+        </footer>
+    </div>
+
+
+
+
+    
+    <script src="/app.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

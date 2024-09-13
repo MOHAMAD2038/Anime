@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Animes</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+b                <a href="index.html" class="logo-link">
+                    <span class="logo-text">Anime-King</span>
+                </a>
+            </div>
+
+            <div class="profile-container">
+               
+            </div>
+         
+            
+            <div class="barrerecherche">
+                <input type="text" id="searchInput" placeholder="Rechercher..." onkeyup="filterAnimes()">
+                <button type="button" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <!-- Liste des résultats de recherche -->
+            <ul id="resultsList"></ul>
+
+            <div class="menu-container">
+                
+                <ul class="menu-list">
+                    <li class="menu-list-item">
+                        <!-- Utilisation d'une balise <a> pour le lien -->
+                        <a href="Animes.html" class="nav-button">Animes</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a href="Films.html" class="nav-button">Films</a>
+                    </li>
+                  
+                </ul>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a href="index.html" class="icon-link">
+            <i class="left-menu-icon fas fa-home"></i> 
+        </a>
+        <a href="reprendre son visionae" class="icon-link"></a>
+        <i class="left-menu-icon fa-regular fa-clock"></i>
+        </a>
+        <a href="Planning.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-calendar-days"></i> 
+        </a>
+        <a href="Catalogue.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-list"></i>
+        </a>
+        <a href="Page-aide.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-gear"></i>
+        </a>
+       
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515);">
+    <div class="movie-list-container">
+        <h1 class="movie-list-title">Anime</h1>
+        <div class="movie-list-wrapper">
+            <div class="movie-list">
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/death note.jpeg" alt="">
+                    <span class="movie-list-item-title">Death Note</span>
+                    <p class="movie-list-item-desc">Light Yagami, un lycéen de 17 ans, découvre un carnet aux pouvoirs terrifiants : tous ceux dont le nom s'y trouve inscrit sont condamnés à mourir dans les quarante secondes…</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/ssassination-classroom.jpg" alt="">
+                    <span class="movie-list-item-title">Assassination Classroom</span>
+                    <p class="movie-list-item-desc">"Assassination Classroom" suit la classe 3-E du collège Kunugigaoka, dont les élèves doivent assassiner leur professeur extraterrestre, Koro-sensei, avant qu'il ne détruise la Terre. Malgré cela, Koro-sensei les enseigne précieusement, aidant chacun à réaliser son potentiel.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/promised neverland.jpg" alt="">
+                    <span class="movie-list-item-title">The Promised Neverland</span>
+                    <p class="movie-list-item-desc">"The Promised Neverland" suit Emma, Norman et Ray, des orphelins qui découvrent que leur orphelinat élève des enfants pour les livrer à des démons. Ils planifient une évasion pour sauver leurs camarades.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/cyberpunk.png" alt="">
+                    <span class="movie-list-item-title">Cyberpunk:Edgerunners</span>
+                    <p class="movie-list-item-desc">"Cyberpunk: Edgerunners" suit David Martinez, un jeune dans une société futuriste, qui devient un mercenaire hors-la-loi pour survivre après une tragédie personnelle.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/parasyte.jpg" alt="">
+                    <span class="movie-list-item-title">Parasyte</span>
+                    <p class="movie-list-item-desc">"Parasyte" suit Shinichi Izumi, un lycéen dont la main droite est envahie par un parasite extraterrestre nommé Migi. Ensemble, ils combattent d'autres parasites et cherchent à comprendre la menace qui pèse sur l'humanité.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/fire force.jpg" alt="">
+                    <span class="movie-list-item-title">Fire Force</span>
+                    <p class="movie-list-item-desc">"Fire Force" suit Shinra Kusakabe, un pompier capable de s'enflammer, qui rejoint la Special Fire Force pour combattre des humains en combustion spontanée et découvrir la vérité derrière ces phénomènes et son passé.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/samouraichamploo.jpg" alt="">
+                    <span class="movie-list-item-title">Samourai Champloo</span>
+                    <p class="movie-list-item-desc">"Samurai Champloo" suit Mugen, Jin et Fuu, trois personnages disparates, dans leur quête à travers le Japon féodal pour trouver le "samouraï qui sent le tournesol." Leur voyage est marqué par des aventures et des confrontations, mêlant action et comédie.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/spy x family.jpg" alt="">
+                    <span class="movie-list-item-title">Spy x Family</span>
+                    <p class="movie-list-item-desc">"Spy x Family" suit Twilight, un espion qui doit créer une fausse famille pour sa mission. Il adopte une fille télépathe, Anya, et épouse une tueuse à gages, Yor, sans connaître leurs secrets. Ensemble, ils naviguent leur double vie tout en formant des liens authentiques.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/hell s paradise.jpg" alt="">
+                    <span class="movie-list-item-title">Hell's Paradise</span>
+                    <p class="movie-list-item-desc">"Hell's Paradise" suit Gabimaru, un ninja condamné à mort, qui se voit offrir une chance de rédemption en cherchant l'élixir d'immortalité sur une île mystérieuse. Accompagné de l'exécutrice Yamada Asaemon Sagiri, il affronte des dangers surnaturels et d'autres criminels en quête de l'élixir.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/black clover.jpeg" alt="">
+                    <span class="movie-list-item-title">Black Clover</span>
+                    <p class="movie-list-item-desc">"Black Clover" suit Asta, un garçon né sans magie dans un monde où elle est omniprésente. Déterminé à devenir le Roi Sorcier, il compense son absence de magie par une force brute et une épée anti-magie. Aux côtés de son rival Yuno et ses amis, il affronte diverses menaces pour protéger le royaume.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/erased.jpg" alt="">
+                    <span class="movie-list-item-title">Erased</span>
+                    <p class="movie-list-item-desc">"Erased" suit Satoru Fujinuma, un homme capable de voyager dans le passé pour prévenir des tragédies. Après que sa mère soit assassinée, il est renvoyé 18 ans en arrière, dans son enfance, pour empêcher une série d'enlèvements et de meurtres et sauver sa mère et ses amis.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/tokyo ghoul.jpg" alt="">
+                    <span class="movie-list-item-title">Tokyo Ghoul</span>
+                    <p class="movie-list-item-desc">"Tokyo Ghoul" suit Ken Kaneki, un étudiant qui devient mi-humain, mi-goule après une greffe d'organe. Luttant pour sa survie et son identité, il navigue entre le monde des humains et celui des goules, créatures mangeuses de chair, tout en affrontant des conflits internes et externes.</p>
+                    <button class="movie-list-item-button">Watch</button>
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="image/fonnoir.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Anime-King. Tous droits réservés.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

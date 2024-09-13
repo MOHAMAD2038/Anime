@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Films</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">Anime-King</span>
+                </a>
+            </div>
+
+            <div class="profile-container">
+               
+            </div>
+         
+            
+            <div class="barrerecherche">
+                <input type="text" id="searchInput" placeholder="Rechercher..." onkeyup="filterAnimes()">
+                <button type="button" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <!-- Liste des résultats de recherche -->
+            <ul id="resultsList"></ul>
+
+            <div class="menu-container">
+                
+                <ul class="menu-list">
+                    <li class="menu-list-item">
+                        <!-- Utilisation d'une balise <a> pour le lien -->
+                        <a href="Animes.html" class="nav-button">Animes</a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a href="Films.html" class="nav-button">Films</a>
+                    </li>
+                </ul>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a href="index.html" class="icon-link">
+            <i class="left-menu-icon fas fa-home"></i> 
+        </a>
+        <a href="reprendre son visionae" class="icon-link"></a>
+        <i class="left-menu-icon fa-regular fa-clock"></i>
+        </a>
+        <a href="Planning.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-calendar-days"></i> 
+        </a>
+        <a href="Catalogue.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-list"></i>
+        </a>
+        <a href="Page-aide.html" class="icon-link">
+            <i class="left-menu-icon fa-solid fa-gear"></i>
+        </a>
+       
+    </div>
+    
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515);">
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Films</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/jujutsu kaisen 0.JPG" alt="">
+                            <span class="movie-list-item-title">Jujutsu Kaisen 0</span>
+                            <p class="movie-list-item-desc">"Jujutsu Kaisen 0" est un film d'animation suit Yuta Okkotsu,hanté par l'esprit de son amie.Il rejoint une école pour apprendre à  exorciser des esprits maléfiques </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/your name.jpeg" alt="">
+                            <span class="movie-list-item-title">Your Name</span>
+                            <p class="movie-list-item-desc">Mitsuha habite avec sa grand-mère et sa petite sœur dans un village au cœur des montagnes, où les traditions ont une importance capitale. Elle souhaite depuis toujours découvrir le quotidien d'un adolescent de Tokyo.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/le-voyage-de-chihiro.jpg" alt="">
+                            <span class="movie-list-item-title">Le Voyage de Chihiro</span>
+                            <p class="movie-list-item-desc">Le film raconte l'histoire de Chihiro, 
+                                une jeune fille de dix ans qui se retrouve transportée dans un monde mystérieux rempli de créatures surnaturelles.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/lechateauambulant.jpg" alt="">
+                            <span class="movie-list-item-title">Le château ambulant</span>
+                            <p class="movie-list-item-desc">Il raconte l'histoire de Sophie,qui est transformée en vieille femme par une sorcière qui entre dans sa boutique.
+                                 Elle rencontre un sorcier nommé Hauru et se retrouve engagée dans son combat pour le roi.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/one piece red.jpg" alt="">
+                            <span class="movie-list-item-title">One Piece Red</span>
+                            <p class="movie-list-item-desc">"One Piece Film: Red" suit Uta, la fille de Shanks, qui organise un concert mondial. L'événement devient chaotique lorsque des secrets sont révélés et que des menaces surgissent.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/Totoro.jpg" alt="">
+                            <span class="movie-list-item-title">Mon Voisin Totoro</span>
+                            <p class="movie-list-item-desc">"Mon Voisin Totoro" suit Satsuki et Mei, deux jeunes sœurs qui emménagent à la campagne et découvrent des créatures magiques, dont Totoro, un esprit de la forêt. Ensemble, ils vivent des aventures enchantées et trouvent du réconfort dans leur nouvelle vie.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="image/fonnoir.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Anime-King. Tous droits réservés.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
