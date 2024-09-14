@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Épisode 1",
+        "description": "Luffy rencontre son premier compagnon, Zoro, dans une petite ville.",
+        "link": "episode1.html"
+    },
+    {
+        "title": "Épisode 2",
+        "description": "Luffy et Zoro combattent les marines pour sauver une amie.",
+        "link": "episode2.html"
+    },
+    {
+        "title": "Épisode 3",
+        "description": "Le duo rencontre Nami, une voleuse qui les aidera à voler un trésor.",
+        "link": "episode3.html"
+    },
+    {
+        "title": "Épisode 4",
+        "description": "Luffy et ses amis affrontent un capitaine pirate pour protéger une ville.",
+        "link": "episode4.html"
+    },
+    {
+        "title": "Épisode 5",
+        "description": "L'équipage de Luffy arrive sur une nouvelle île où ils rencontrent un mystérieux personnage.",
+        "link": "episode5.html"
+    }
+]
